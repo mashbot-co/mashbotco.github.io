@@ -1,0 +1,150 @@
+---
+layout: page
+title: Contact Us
+---
+
+<!-- START CONTACT SECTION -->
+<section class="container container-fixed-lg p-t-65 p-b-100  sm-p-b-30 sm-m-b-30">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>We'd love to hear from you!</h2>
+            <div class="p-r-40 sm-p-r-0">
+                <p>If you have a question, concern or would like to tell us how good we're doing, we'd love to hear from you.</p>
+                <br>
+                <br>
+                <div class="panel" id="contact-panel">
+                    <div id="message-sent-alert" class="alert alert-success" role="alert" style="display:none;">
+                        <strong>Message Sent!</strong> We've received your message and will get back to you as soon as possible.
+                    </div>
+                    <p class="semi-bold no-margin">Please complete all required (*) fields.</p>
+                    <form role="form" autocomplete="off" class="m-t-15" id="contact_us_form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group form-group-default required">
+                                    <label>First name</label>
+                                    <input type="text" name="first_name" class="form-control" placeholder="e.g. Peter" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group form-group-default required">
+                                    <label>Last name</label>
+                                    <input type="text" name="last_name" placeholder="e.g. Pan" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-default required">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="e.g. peter.pan@neverland.com" class="form-control" required>
+                        </div>
+                        <div class="form-group form-group-default required">
+                            <label>Message</label>
+                            <textarea name="message" placeholder="Type the message you wish to send" style="height:100px" class="form-control" required></textarea>
+                        </div>
+                        <div class="sm-p-t-10 clearfix">
+                            <p class="pull-left small hint-text m-t-5 font-arial">I hereby certify that the information above is true and accurate. </p>
+                            <button type="submit" class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left" disabled="disabled">Submit</button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="visible-xs visible-sm b-b b-grey-light m-t-35 m-b-30"></div>
+            <div class="p-l-40 sm-p-l-0 sm-p-t-10">
+                <h3>Other ways to reach us.</h3>
+                <p>If you'd like to call us or come visit us, please see the details below.</p>
+                <br>
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h5 class="block-title hint-text m-b-0">texas </h5>
+                        <address class="m-t-10">5001 Spring Valley Road
+                        <br> Suite 1050-W
+                        <br> Dallas, TX 75244</address>
+                        <a class="semi-bold" target="_blank" href="https://www.google.com/maps/place/5001+Spring+Valley+Rd+%231050,+Dallas,+TX+75244/@32.9400414,-96.8257862,17z/data=!3m1!4b1!4m5!3m4!1s0x864c2127ce2e45b5:0xef8a454617da25e3!8m2!3d32.9400414!4d-96.8235975">View Map</a>
+                        <br>
+                        <br>
+
+                        <p class="hint-text no-margin"><span class="fs-12 font-montserrat bold all-caps p-r-10">Tel</span> <span class="fs-14">(855) PARANET</span></p>
+                        <p class="hint-text"><span class="fs-12 font-montserrat bold all-caps p-r-10">Fax</span> <span class="fs-14">(877) 412-7766</span></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <!-- <h5 class="block-title hint-text m-b-0">canada </h5>
+                        <address class="m-t-10">Station 322
+                        <br> Ottawa Ontario K1AOB1
+                        <br> Canada.
+                    </address>
+                        <br>
+                        <p class="hint-text no-margin"><span class="fs-12 font-montserrat bold all-caps p-r-10">Tel</span> <span class="fs-14">(877) 412-7766</span></p>
+                        <p class="hint-text"><span class="fs-12 font-montserrat bold all-caps p-r-10">Fax</span> <span class="fs-14">(877) 412-7766</span></p> -->
+                    </div>
+                </div>
+                <br>
+                <h5 class="block-title hint-text m-b-0">Paranet Public Inquiries &amp; Communications </h5>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="fs-12 font-montserrat bold all-caps no-margin hint-text">Hotline </p>
+                        <p class="hint-text no-margin fs-14">(214) 623-5200</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="fs-12 font-montserrat bold all-caps no-margin hint-text">Email </p>
+                        <p class="hint-text no-margin fs-14">helpdesk@paranet.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CONTACT SECION -->
+<!-- START GOOGLE MAP -->
+<section class="container-fluid  no-padding no-overflow">
+    <!-- Map -->
+    <div id="google-map" class="full-width demo-map gradient-overlay no-overflow"></div>
+</section>
+<!-- END GOOGLE MAP -->
+
+
+
+<script>
+    $(document).ready(function() {
+        $('#contact_us_form')
+            .formValidation({
+                framework: 'bootstrap',
+                icon: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                }
+            })
+            .on('success.field.fv', function(e, data) {
+                if (data.fv.getInvalidFields().length > 0) { // There is invalid field
+                    data.fv.disableSubmitButtons(true);
+                }
+            });
+
+
+        $('#contact_us_form').on('submit', function(e) {
+
+            e.preventDefault();
+            // Change to your service ID, or keep using the default service
+            var service_id = "paranet_mailgun_smtp_server",
+                template_id = "paranet_contact_us",
+                form = "contact_us_form";
+
+            emailjs.sendForm(service_id, template_id, form)
+                .then(function() {
+                  $('#message-sent-alert').show();
+                }, function(err) {
+                    alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+
+                });
+            return false;
+
+        });
+
+
+    });
+</script>

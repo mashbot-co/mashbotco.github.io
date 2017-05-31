@@ -1,0 +1,20 @@
+title: Paranet
+email: support@paranet.com
+description: Paranet has been a leading provider of IT managed and professional services, network security, cloud solutions and IT due diligence for over 25 years.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://www.paranet.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+theme:
+collections:
+  careers:
+    output: true
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
